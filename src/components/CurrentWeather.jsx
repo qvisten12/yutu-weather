@@ -12,10 +12,10 @@ const CurrentWeather = ({ currentWeatherData }) => {
             </p>
             <div className="flex mt-2">
               <p className="font-bold text-lg md:text-xl mr-2">
-                {Math.round(currentWeatherData.main.temp_max)}&deg;C
+                {currentWeatherData.main.temp_max.toFixed(0)}&deg;C
               </p>
               <p className="font-medium text-lg opacity-80">
-                {Math.round(currentWeatherData.main.temp_min)}&deg;C
+                {currentWeatherData.main.temp_min.toFixed(0)}&deg;C
               </p>
             </div>
             <div className="flex mt-4">

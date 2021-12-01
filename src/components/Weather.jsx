@@ -41,6 +41,7 @@ const Weather = () => {
     fetchCurrentData();
     fetchHourlyData();
     fetchWeeklyData();
+    window.scrollTo(0, 0);
   }, []);
 
   return (
