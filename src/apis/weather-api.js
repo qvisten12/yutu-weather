@@ -1,5 +1,5 @@
 export const getCurrentWeather = async (location) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`;
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`;
 
   const res = await fetch(url);
   const data = await res.json();
@@ -25,7 +25,7 @@ export const getHourlyWeather = async (location) => {
 };
 
 export const getWeeklyWeather = async (location) => {
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`;
+  const url = `http://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`;
 
   const res = await fetch(url);
   const data = await res.json();
