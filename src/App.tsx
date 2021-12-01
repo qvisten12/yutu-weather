@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Searchbar from "./components/Searchbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Weather from "./components/Weather";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="bg-white h-screen">
+        <Routes>
+          <Route path="/weather/:location" element={<Weather />} />
+          <Route path="/" element={<Searchbar />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
